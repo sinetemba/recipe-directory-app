@@ -47,6 +47,28 @@
       "method": "test method",
       "cookingTime": "45 minutes",
       "id": "LyXYb3z"
+    },
+    {
+      "title": "Oxtail",
+      "ingredients": [
+        "oxtail",
+        "carrot",
+        "potatoes"
+      ],
+      "method": "cook for hours lol",
+      "cookingTime": "57 minutes",
+      "id": "Y12SYqe"
+    },
+    {
+      "title": "Lamb stew",
+      "ingredients": [
+        "lamp pieces",
+        "mixed verge",
+        "beefstock"
+      ],
+      "method": "add water, add salt blah blah",
+      "cookingTime": "86 minutes",
+      "id": "s_f55LZ"
     }
   ]
 }
