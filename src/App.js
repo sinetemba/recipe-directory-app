@@ -14,30 +14,30 @@ import { useTheme } from './hooks/useTheme';
 
 function App() {
 
-  const {mode} = useTheme()
+  const { mode } = useTheme()
 
   return (
     <div className={`App ${mode}`}>
       <BrowserRouter>
 
-      <Navbar/>
-      <ThemeSelector/>
-       <Switch>
+        <Navbar />
+        <ThemeSelector />
+        <Switch>
 
-        <Route exact path="/">
-          <Home/>
-        </Route>
-        <Route  path="/create">
-          <Create/>
-        </Route>
-        <Route  path="/search">
-          <Search/>
-        </Route>
-        <Route path="/recipes/:id">
-          <Recipe/>
-        </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/create">
+            <Create />
+          </Route>
+          <Route path="/search">
+            <Search />
+          </Route>
+          <Route path="/recipes/:id">
+            <Recipe />
+          </Route>
 
-       </Switch>
+        </Switch>
       </BrowserRouter>
     </div>
   );
