@@ -16,10 +16,14 @@ export default function Home() {
   useEffect(() => {
     setIsPending(true);
 
+    //#region Old code
     //connect to the recipes collection in Firebase
     //get() returns snapshots of collection, is async and returns a promise
     //then() callback function fires when get is done 
-    projectFirestore.collection('recipes').get().then((snapshot) => {
+    //#endregion
+
+    //onSnapshot function gets realtime updates (delete,add etc...)
+    const unsub = projectFirestore.collection('recipes').onSnapshot((snapshot) => {
       if (snapshot.empty) {
         setError('No recipes to load')
         isPending(false)
@@ -31,11 +35,12 @@ export default function Home() {
         setData(results);
         setIsPending(false)
       }
-    }).catch(err => {
+    }, (err) => {
       setError(err.message)
       setIsPending(false)
     })
 
+    return () => unsub() // unsubcribes from the listener
   }, [])
 
 
