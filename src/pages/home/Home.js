@@ -41,7 +41,7 @@ export default function Home() {
     })
 
     return () => unsub() // unsubcribes from the listener
-  }, [])
+  }, [isPending])
 
 
   return (
